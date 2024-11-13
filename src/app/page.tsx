@@ -1,5 +1,5 @@
 
-import { auth, signIn } from "@/auth"
+import { auth, signIn, signOut } from "@/auth"
 export default async function Home() {
   const session = await auth();
   return (
@@ -10,7 +10,7 @@ export default async function Home() {
           <form
             action={async () => {
               "use server"
-              await signIn("google")
+              await signOut()
             }}
           >
             <button className="border px-4 py-2 bg-red-500 text-white" type="submit">Logout</button>
