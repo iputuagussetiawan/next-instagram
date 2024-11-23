@@ -28,16 +28,22 @@ const images=[
 ]
 export default function PostsGrid() {
     return (
-        <Masonry
-            breakpointCols={3}
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column">
-                {images.map(image=>
-                (   
-                    <div key={image}>
-                        <img src={image} alt="" />
-                    </div>
-                ))}
-        </Masonry>
+        <div className="max-w-4xl mx-auto">
+            <Masonry
+                breakpointCols={{
+                    default: 4,
+                    860: 3,
+                    500: 2
+                }}
+                className="flex"
+                columnClassName="pl-4">
+                    {images.map(image=>
+                    (   
+                        <div className='mb-4 border-4' key={image}>
+                            <img src={image} alt="" />
+                        </div>
+                    ))}
+            </Masonry>
+        </div>
     );
 }

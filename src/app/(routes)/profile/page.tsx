@@ -15,7 +15,9 @@ export default function ProfilePage(){
                         <CheckIcon size={16}/>
                     </div>
                 </div>
-                <button><Cog/></button>
+                <Link href='/settings'>
+                    <Cog/>
+                </Link>
             </section>
             <section className="mt-8 flex justify-center">
                 <div className="size-48 p-2 bg-gradient-to-tr from-red-500 to-orange-500 rounded-full">
