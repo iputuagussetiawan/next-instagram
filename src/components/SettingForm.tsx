@@ -20,8 +20,8 @@ export function SettingForm({userEmail, profile}:{userEmail:string, profile:Prof
                 method:'POST', 
                 body:data
             }).then(response=>{
-                response.json().then(url=>{
-                    setAvatarUrl(url);
+                response.json().then(fileUrl=>{
+                    setAvatarUrl(fileUrl);
                 })
             });
         }
